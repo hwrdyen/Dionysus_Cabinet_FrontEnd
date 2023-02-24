@@ -1,0 +1,36 @@
+@use "variable" as *;
+
+//Font Black 
+@font-face {
+    font-family: "SourceSerifPro-Black";
+    src: url(../../assets/Fonts/SourceSerifPro-Black.ttf) format("truetype");
+    font-weight: 900;
+}
+
+//Font Bold 
+@font-face {
+    font-family: "SourceSerifPro-Bold";
+    src: url(../../assets/Fonts/SourceSerifPro-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+//Font SemiBold
+@font-face {
+    font-family: "SourceSerifPro-SemiBold";
+    src: url(../../assets/Fonts/SourceSerifPro-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+}
+
+//Font Regular
+@font-face {
+    font-family: "SourceSerifPro-Regular";
+    src: url(../../assets/Fonts/SourceSerifPro-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+//Font Regular
+@font-face {
+    font-family: "Creepster-Regular";
+    src: url(../../assets/Fonts/Creepster-Regular.ttf) format("truetype");
+    font-weight: 400;
+}

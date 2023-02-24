@@ -1,0 +1,43 @@
+@use "variable" as *;
+@use "typography" as *;
+@use "mixins" as *;
+
+* {
+    text-decoration: none;
+    list-style: none;
+    font-family: "SourceSerifPro-Bold";
+}
+
+#root {
+    background-color: #F4A950;
+}
+
+header {
+}
+
+section {
+}
+
+h1 {
+}
+
+h2 {
+    // font-weight: 600;
+    // font-size: 1rem;
+    // color: $instock-slate;
+}
+
+h3 {
+    // font-weight: 600;
+    // font-size: 1rem;
+    // color: $instock-blue;
+}
+
+p {
+    // font-weight: 600;
+    // font-size: 1rem;
+    // color: $instock-black;
+}
+
+footer {
+}

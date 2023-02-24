@@ -1,0 +1,87 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media screen and (min-device-width: 0px){
+    .Mood-Result__moodtitle {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-family: "Creepster-Regular";
+        letter-spacing: 10px;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+    }
+
+    .neon-text {
+        color: #fff;
+        // box-shadow:
+        //     0 0 7px #fff,
+        //     0 0 10px #fff,
+        //     0 0 21px #fff,
+        //     0 0 42px #0fa,
+        //     0 0 82px #0fa,
+        //     0 0 92px #0fa,
+        //     0 0 102px #0fa,
+        //     0 0 151px #0fa;
+
+        color: lighten(#0fa, 25%);
+        -webkit-text-stroke-color: lighten(#0fa, 5%);
+        text-shadow: 0 0 40px lighten(#fff, 5%),
+                    0 0 40px lighten(#0fa, 5%),
+                    0 0 40px lighten(#0fa, 5%);
+        &:after {
+        z-index: -1;
+        position: absolute;
+        color: transparent;
+        -webkit-text-stroke-color: darken(#0fa, 40%);
+        top: -5%;
+        left: -0.5%;
+        
+        }
+    }
+
+    .Mood-Result__block {
+        animation-name: fadeIn;
+        animation-duration: 3s;
+        background-color: #633474b3;
+        margin: 10px 0px;
+        width: 120px;
+        height: 170px;
+        display: flex;
+        flex-direction: column
+    }
+    
+    .Mood-Result__image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .Mood-Result__title {
+        text-align: center;
+        margin: 0px;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .Mood-Result__ShowResult {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Mood-Result__NoResult {
+        display: none;
+    }
+}
+	
+
+@media screen and (min-device-width: 768px){
+
+}
+
+@media screen and (min-device-width: 1280px){
+
+}

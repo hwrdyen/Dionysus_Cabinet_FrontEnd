@@ -1,0 +1,119 @@
+@media screen and (min-device-width: 0px){
+    .Alcohol_Cabinet {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: 0.0625rem solid black;
+        background-color: #161B21;
+        color: #F4A950;
+        border-radius: 3px;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Alcohol_Cabinet__titlecontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Alcohol_Cabinet__title {
+        font-size: 20px;
+        margin: 5px 0px;
+    }
+
+    .Alcohol_Cabinet__alcoholtype {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 277px;
+    }
+
+    .Alcohol_Cabinet__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Alcohol_Cabinet__block_image {
+        width: 40px;
+        height: 70px;
+    }
+
+    .Alcohol_Cabinet__block_title {
+        text-align: center;
+        font-size: 10px;
+        height: 30px;
+        width: 40px;
+        text-align: center;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Alcohol_Cabinet {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding: 20px 30px;
+    }
+
+    .Alcohol_Cabinet__title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .Alcohol_Cabinet__alcoholtype {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 35px;
+        width: 500px;
+    }
+
+    .Alcohol_Cabinet__block_image {
+        width: 50px;
+        height: 80px;
+    }
+
+    .Alcohol_Cabinet__block_title {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Alcohol_Cabinet {
+        padding: 50px 30px;
+    }
+
+    .Alcohol_Cabinet__title {
+        font-size: 45px;
+    }
+
+    .Alcohol_Cabinet__alcoholtype {
+        gap: 40px;
+        width: 650px;
+    }
+
+    .Alcohol_Cabinet__block_image {
+        width: 70px;
+        height: 100px;
+    }
+
+    .Alcohol_Cabinet__block_title {
+        font-size: 15px;
+    }
+}

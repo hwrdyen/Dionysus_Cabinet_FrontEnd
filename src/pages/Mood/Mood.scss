@@ -1,0 +1,132 @@
+@media screen and (min-device-width: 0px){
+    .Mood {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: 0.0625rem solid black;
+        background-color: #161B21;
+        color: #F4A950;
+        border-radius: 3px;
+        padding: 10px 20px;
+    }
+
+    .Mood__titlecontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Mood__title {
+        font-size: 20px;
+        margin: 5px 0px;
+    }
+
+    .Mood__navbar--list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .Mood__navbar--item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+    }
+
+    .Mood__item--image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .Mood__item--title {
+        margin: 0px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .Mood__loadinggif--container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Mood__loadinggif--gif {
+        width: 200px;
+        height: 150px;
+    }
+
+    .Mood__navbar--StillLoading,
+    .Mood__result--StillLoading {
+        display: none;
+    }
+
+    .Mood__navbar--FinishedLoading,
+    .Mood__result--FinishedLoading {
+        display: flex;
+    }
+
+    .Mood__result--FinishedLoading {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Mood {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding: 20px 30px;
+    }
+
+    .Mood__title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .Mood__navbar--item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .Mood__item--image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .Mood__item--title {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Mood {
+        padding: 50px 30px;
+    }
+
+    .Mood__title {
+        font-size: 45px;
+    }
+
+    .Mood__navbar--item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Mood__item--image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .Mood__item--title {
+        font-size: 15px;
+    }
+}

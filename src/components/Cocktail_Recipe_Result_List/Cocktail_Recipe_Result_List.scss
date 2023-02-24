@@ -1,0 +1,94 @@
+@media screen and (min-device-width: 0px){
+    .Result__Number {
+        background-color: #CEBBA8;
+        color: #161B21;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Result__ItemList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 253px;
+    }
+
+    .Result__Reset {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Recipe_SearchResult {
+        display: flex;
+        font-size: 10px;
+    }
+
+    .Recipe_ZeroResult {
+        display: none;
+    }
+
+    .Cocktail_Recipe_Result_List__resetbutton {
+        background-color: #F4A950;
+        color: #161B21;
+        margin: 10px 0px;
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: none;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Result__Number {
+        font-size: 12px;
+        background-color: grey;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Result__ItemList {
+        width: 450px;
+    }
+
+    .Recipe_ZeroResult {
+        display: none;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Result__Number {
+        font-size: 18px;
+        background-color: grey;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Result__ItemList {
+        width: 550px;
+    }
+
+    .Recipe_ZeroResult {
+        display: none;
+    }
+
+    .Cocktail_Recipe_Result_List__resetbutton {
+        margin: 10px 0px;
+        border-radius: 20px;
+        padding: 10px 40px;
+    }
+}

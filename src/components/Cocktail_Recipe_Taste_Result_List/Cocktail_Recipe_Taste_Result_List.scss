@@ -1,0 +1,74 @@
+@media screen and (min-device-width: 0px){
+    .nonactive {
+        display: none;
+    }
+
+    .active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Taste_Result--title,
+    .Taste_Result--titledescription {
+        margin: 5px;
+    }
+
+    .Taste_Result--titledescription {
+        font-size: 12px;
+    }
+
+    .Cocktail_Recipe_Taste_Result_List {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 280px;
+    }
+
+    .Cocktail_Recipe_Taste_Result_List--ItemList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 253px;
+    }
+
+    .Taste_Result--titlecontainer {
+        background-color: #F4A950;
+        color: #161B21;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    .Cocktail_Recipe_Taste_Result_List {
+        width: 350px;
+    }
+
+    .Cocktail_Recipe_Taste_Result_List--ItemList {
+        width: 450px;
+    }
+}
+
+@media screen and (min-device-width: 1280px){
+    .Cocktail_Recipe_Taste_Result_List {
+        width: 500px;
+    }
+
+    .Cocktail_Recipe_Taste_Result_List--ItemList {
+        width: 550px;
+    }
+
+    .Taste_Result--title {
+        font-size: 20px;
+    }
+
+    .Taste_Result--titledescription {
+        font-size: 15px;
+    }
+}
