@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     function GetAllRecipesInfo() {
-      return axios.get(`http://localhost:8080/cocktails_list`)
+      return axios.get(`https://dionysus-cabinet-backend.herokuapp.com/cocktails_list`)
       .then((element) => {
           let recipes_info = element.data;
           setAllRecipesInfo(recipes_info);
@@ -40,7 +40,7 @@ function App() {
 
   useEffect(() => {
     function GetCurrentAlcoholRecipesInfo() {
-      return axios.get(`http://localhost:8080/cocktails_list`)
+      return axios.get(`https://dionysus-cabinet-backend.herokuapp.com/cocktails_list`)
       .then((element) => {
           let recipes_info = element.data;
           if (CurrentAlcohol !== "") {

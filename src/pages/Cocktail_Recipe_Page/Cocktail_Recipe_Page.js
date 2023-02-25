@@ -21,7 +21,7 @@ function Cocktail_Recipe_Page(props) {
                         <div className="Recipe__name">{CurrentCocktailRecipe?.cocktail_name}</div>
                         <div className={`Recipe__author ${CurrentCocktailRecipe?.cocktail_recipe_author?.name ? `show` : `hidden`}`}>By {CurrentCocktailRecipe?.cocktail_recipe_author?.name}</div>
                     </div>
-                    <img className="Recipe__image" src={`http://localhost:8080/assets/Cocktail_Type/${CurrentCocktailRecipe?.img_id}.jpg`}/>
+                    <img className="Recipe__image" src={`https://dionysus-cabinet-backend.herokuapp.com/assets/Cocktail_Type/${CurrentCocktailRecipe?.img_id}.jpg`}/>
                 </div>
 
                 <div className="Recipe__tags--list" id="Recipe__tags--list">{

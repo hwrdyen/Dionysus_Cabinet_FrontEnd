@@ -23,7 +23,7 @@ function Mood(props) {
 
     useEffect(() => {
       function GetRepresentMoodList() {
-        return axios.get(`http://localhost:8080/represent_mood_list`)
+        return axios.get(`https://dionysus-cabinet-backend.herokuapp.com/represent_mood_list`)
         .then((element) => {
             let represent_mood_list_info = element.data;
             setRepresentMoodList(represent_mood_list_info);  
@@ -80,7 +80,7 @@ function Mood(props) {
                 <div id="Mood__navbar--list" className="Mood__navbar--list">{
                     RepresentMoodList.map((represent_mood) => (
                         <div id={represent_mood?.image_name} className="Mood__navbar--item" onClick={SelectMood}>
-                            <img className="Mood__item--image" src={`http://localhost:8080/assets/Mood_Type/${represent_mood?.image_name}.svg`}/>
+                            <img className="Mood__item--image" src={`https://dionysus-cabinet-backend.herokuapp.com/assets/Mood_Type/${represent_mood?.image_name}.svg`}/>
                             <p className="Mood__item--title">{represent_mood?.mood_name}</p>
                         </div>
                 ))}
