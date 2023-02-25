@@ -6,7 +6,7 @@ function Cocktail_Recipe_Page(props) {
     const { cocktail_recipe_ID } = useParams();
 
 
-    let CurrentCocktailRecipe = props.AllRecipesInfo.find((cocktail_recipe) => cocktail_recipe?.id === cocktail_recipe_ID);
+    let CurrentCocktailRecipe = props.AllRecipesInfo.find((cocktail_recipe) => cocktail_recipe?.recipe_id === cocktail_recipe_ID);
 
     const navigate = useNavigate();
     if (!CurrentCocktailRecipe) {
@@ -19,13 +19,13 @@ function Cocktail_Recipe_Page(props) {
                 <div className="Recipe__info">
                     <div className="Recipe__infotitle--container">
                         <div className="Recipe__name">{CurrentCocktailRecipe?.cocktail_name}</div>
-                        <div className={`Recipe__author ${CurrentCocktailRecipe?.cocktail_recipe_author?.name ? `show` : `hidden`}`}>By {CurrentCocktailRecipe?.cocktail_recipe_author?.name}</div>
+                        <div className={`Recipe__author ${CurrentCocktailRecipe?.cocktail_recipe_author_name ? `show` : `hidden`}`}>By {CurrentCocktailRecipe?.cocktail_recipe_author_name}</div>
                     </div>
-                    <img className="Recipe__image" src={`https://dionysus-cabinet-backend.herokuapp.com/assets/Cocktail_Type/${CurrentCocktailRecipe?.img_id}.jpg`}/>
+                    <img className="Recipe__image" src={`http://localhost:8080/assets/Cocktail_Type/${CurrentCocktailRecipe?.img_id}.jpg`}/>
                 </div>
 
                 <div className="Recipe__tags--list" id="Recipe__tags--list">{
-                    CurrentCocktailRecipe?.cocktail_included_alchohol.map((alcohol) => (
+                    CurrentCocktailRecipe?.cocktail_included_alchohol.split(",").map((alcohol) => (
                         <div className="Recipe__tags--item">{alcohol}</div>
                     ))
                 }</div>

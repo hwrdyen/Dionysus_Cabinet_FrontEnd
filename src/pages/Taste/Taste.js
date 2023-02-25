@@ -13,7 +13,7 @@ function Taste(props) {
 
     useEffect(() => {
       function GetTastePreferencesList() {
-        return axios.get(`https://dionysus-cabinet-backend.herokuapp.com/taste_preferences_list`)
+        return axios.get(`http://localhost:8080/taste_preferences_list`)
         .then((element) => {
             let taste_preferences_list_info = element.data;
             setTastePreferencesList(taste_preferences_list_info);  

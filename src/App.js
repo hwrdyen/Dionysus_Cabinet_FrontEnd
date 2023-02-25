@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     function GetAllRecipesInfo() {
-      return axios.get(`https://dionysus-cabinet-backend.herokuapp.com/cocktails_list`)
+      return axios.get(`http://localhost:8080/cocktails_list`)
       .then((element) => {
           let recipes_info = element.data;
           setAllRecipesInfo(recipes_info);
@@ -37,10 +37,11 @@ function App() {
     }
 
   }, [RefetchRecipe])
+  console.log(AllRecipesInfo);
 
   useEffect(() => {
     function GetCurrentAlcoholRecipesInfo() {
-      return axios.get(`https://dionysus-cabinet-backend.herokuapp.com/cocktails_list`)
+      return axios.get(`http://localhost:8080/cocktails_list`)
       .then((element) => {
           let recipes_info = element.data;
           if (CurrentAlcohol !== "") {
@@ -70,7 +71,7 @@ function App() {
           <Route path="/liquor_cellar" element={<Alcohol_Cabinet CurrentAlcohol={CurrentAlcohol} setCurrentAlcohol={setCurrentAlcohol} CurrentAlcoholRecipes={CurrentAlcoholRecipes}/>}/>
           <Route path="/cocktail_recipe/:cocktail_recipe_ID" element={<Cocktail_Recipe_Page AllRecipesInfo={AllRecipesInfo}/>}/>
           <Route path="taste_concierge" element={<Taste AllRecipesInfo={AllRecipesInfo}/>} />
-          <Route path="mood_matchmaker" element={<Mood AllRecipesInfo={AllRecipesInfo}/>} />
+          <Route path="mood_matchmaker" element={<Mood AllRecipesInfo={AllRecipesInfo} setRefetchRecipe={setRefetchRecipe}/>} />
           <Route path="upload" element={<Upload setRefetchRecipe={setRefetchRecipe}/>} />
           <Route path="*" element={<NotFound />}/>
         </Routes>

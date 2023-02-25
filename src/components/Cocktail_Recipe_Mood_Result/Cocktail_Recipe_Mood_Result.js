@@ -5,6 +5,10 @@ import { NavLink } from 'react-router-dom';
 function Cocktail_Recipe_Mood_Result(props) {
     const [CurrentMoodRecipesList, setCurrentMoodRecipesList] = useState([]);
     
+    //onClick rerender the AllList
+    const OnClick = (event) => {
+        props.setRefetchRecipe(true);
+    }
 
     useEffect(() => {
         if (props.CurrentMood !== "") {
@@ -20,6 +24,7 @@ function Cocktail_Recipe_Mood_Result(props) {
     // console.log(CurrentMoodRecipesList);
 
     // Select a random Cocktail Recipe from the CurrentMoodRecipesList
+
     let random = Math.floor(Math.random() * CurrentMoodRecipesList.length);
     let random_MoodRecipe = CurrentMoodRecipesList[parseInt(random)];
 
@@ -27,14 +32,19 @@ function Cocktail_Recipe_Mood_Result(props) {
         <>
             <section className="Cocktail_Recipe_Mood_Result">
                 <p className="Mood-Result__moodtitle neon-text">"{props.CurrentMood}"</p>
-                <NavLink to={`/cocktail_recipe/${random_MoodRecipe?.id}`} className={`${random_MoodRecipe ? 'Mood-Result__ShowResult' : 'Mood-Result__NoResult'}`}>
+                <NavLink to={`/cocktail_recipe/${random_MoodRecipe?.recipe_id}`} className={`${random_MoodRecipe ? 'Mood-Result__ShowResult' : 'Mood-Result__NoResult'}`}>
                     <div className="Mood-Result__block">
-                        <img className="Mood-Result__image" src={`${random_MoodRecipe?.img_id ? `https://dionysus-cabinet-backend.herokuapp.com/assets/Cocktail_Type/${random_MoodRecipe?.img_id}.jpg` : ""} `}/>
+                        <img className="Mood-Result__image" src={`${random_MoodRecipe?.img_id ? `http://localhost:8080/assets/Cocktail_Type/${random_MoodRecipe?.img_id}.jpg` : ""} `}/>
                         <p className="Mood-Result__title neon-text">{random_MoodRecipe?.cocktail_name}</p>
                     </div>
                 </NavLink>
 
-                
+
+                <button className="Mood-Result__randombutton" onClick={OnClick}>
+                    Next Please
+                </button>
+
+
             </section>
         </>
     );

@@ -4,6 +4,13 @@
 }
 
 @media screen and (min-device-width: 0px){
+    .Cocktail_Recipe_Mood_Result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .Mood-Result__moodtitle {
         font-size: 20px;
         text-align: center;
@@ -74,6 +81,15 @@
 
     .Mood-Result__NoResult {
         display: none;
+    }
+
+    .Mood-Result__randombutton {
+        background-color: #F4A950;
+        color: #161B21;
+        margin: 10px 0px;
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: none;
     }
 }
 	

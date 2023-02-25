@@ -15,10 +15,8 @@ function Upload(props) {
         cocktail_recipe_steps: null,
         represent_mood: null,
         taste_preferences: null,
-        cocktail_recipe_author: {
-          name: null,
-          email: null
-        }
+        cocktail_recipe_author_name: null,
+        cocktail_recipe_author_email: null
     });
 
     const navigate = useNavigate();
@@ -59,6 +57,7 @@ function Upload(props) {
                 liquor_type_result_value.push(liquor_type_result[i].value);
             }
         }
+        let liquor_type_result_join_value = liquor_type_result_value.join(",");
         // console.log(liquor_type_result_value);
         // end of Liquor Type Checkbox
 
@@ -87,18 +86,16 @@ function Upload(props) {
 
         // start of Combining all Info into NewCocktailRecipe_Object
         let NewRecipe_Object = {
-            id: uuid.v4(),
+            recipe_id: uuid.v4(),
             img_id: "z9z9",
             cocktail_name: cocktail_name,
             cocktail_ingredients: join_cocktail_ingredients_value,
-            cocktail_included_alchohol: liquor_type_result_value,
+            cocktail_included_alchohol: liquor_type_result_join_value,
             cocktail_recipe_steps: join_steps_to_make_value,
-            represent_mood: [mood_category_result_value],
-            taste_preferences: [taste_category_result_value],
-            cocktail_recipe_author: {
-              name: author_name_value,
-              email: author_email_value
-            }
+            represent_mood: mood_category_result_value,
+            taste_preferences: taste_category_result_value,
+            cocktail_recipe_author_name: author_name_value,
+            cocktail_recipe_author_email: author_email_value
         };
 
         // console.log(NewRecipe_Object);
@@ -115,7 +112,7 @@ function Upload(props) {
     // Successfully submit and make a post request to backend
     useEffect(() => {
         if (SuccessfullySubmit === true) {
-            axios.post(`https://dionysus-cabinet-backend.herokuapp.com/cocktails_list`, NewCocktailRecipe)
+            axios.post(`http://localhost:8080/cocktails_list`, NewCocktailRecipe)
             .then(res => {
                 console.log(res);
                 setSuccessfullySubmit(false);
