@@ -16,7 +16,7 @@ function NotFound() {
                 </div>
                 <div className="NotFound__imagecontainer">
                     <div className="NotFound__imagefilter"></div>
-                    <img className="NotFound__image" src={NotFoundGit}/>
+                    <img className="NotFound__image" src={NotFoundGit} alt="404 Not Found"/>
                 </div>
                 
             </section>

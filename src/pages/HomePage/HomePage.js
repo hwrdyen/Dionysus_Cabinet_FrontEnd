@@ -16,7 +16,7 @@ function HomePage() {
 
                 <div className="HomePage__background--container">
                     <div className="HomePage__background--filter"></div>
-                    <img className="HomePage__background--image" src={bar_gif}/>
+                    <img className="HomePage__background--image" src={bar_gif} alt="Home Page Background"/>
                 </div>
 
 

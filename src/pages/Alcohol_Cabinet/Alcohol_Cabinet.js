@@ -1,11 +1,10 @@
 import './Alcohol_Cabinet.scss';
 
 import axios from 'axios';
-import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 //import components
-import Cocktail_Recipe_Result_List from "../../components/Cocktail_Recipe_Result_List/Cocktail_Recipe_Result_List.js";
+import CocktailRecipeResultList from "../../components/Cocktail_Recipe_Result_List/Cocktail_Recipe_Result_List.js";
 
 function Alcohol_Cabinet(props) {
 
@@ -49,7 +48,7 @@ function Alcohol_Cabinet(props) {
                                 </div>                     
                 ))}</div>
 
-                <Cocktail_Recipe_Result_List CurrentAlcohol={props.CurrentAlcohol} CurrentAlcoholRecipes={props.CurrentAlcoholRecipes} ResetSelectAlcohol={ResetSelectAlcohol} />
+                <CocktailRecipeResultList CurrentAlcohol={props.CurrentAlcohol} CurrentAlcoholRecipes={props.CurrentAlcoholRecipes} ResetSelectAlcohol={ResetSelectAlcohol} />
 
             </section>
         </>

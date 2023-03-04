@@ -2,7 +2,7 @@ import "./Cocktail_Recipe_Taste_Result_List.scss";
 import { useState, useEffect } from 'react';
 
 //import components
-import Cocktail_Recipe_Taste_Result_Item from "../Cocktail_Recipe_Taste_Result_Item/Cocktail_Recipe_Taste_Result_Item";
+import CocktailRecipeTasteResultItem from "../Cocktail_Recipe_Taste_Result_Item/Cocktail_Recipe_Taste_Result_Item";
 
 function Cocktail_Recipe_Taste_Result_List(props) {
     const [CurrentTasteRecipesList, setCurrentTasteRecipesList] = useState([]);
@@ -17,7 +17,7 @@ function Cocktail_Recipe_Taste_Result_List(props) {
         else {
             setCurrentTasteRecipesList([]);
         }
-    }, [props.CurrentTaste]);
+    }, [props.CurrentTaste, props.AllRecipesInfo]);
     // console.log(CurrentTasteRecipesList);
 
     useEffect(() => {
@@ -29,7 +29,7 @@ function Cocktail_Recipe_Taste_Result_List(props) {
         else {
             setCurrentTasteInfo([]);
         }
-    }, [props.CurrentTaste])
+    }, [props.CurrentTaste, props.TastePreferencesList])
     // console.log(CurrentTasteInfo);
 
     return (
@@ -41,8 +41,8 @@ function Cocktail_Recipe_Taste_Result_List(props) {
                 </div>
 
                 <div className="Cocktail_Recipe_Taste_Result_List--ItemList">{
-                    CurrentTasteRecipesList.map((CurrentTasteRecipeItem) => (
-                        <Cocktail_Recipe_Taste_Result_Item CurrentTasteRecipeItem={CurrentTasteRecipeItem}/>
+                    CurrentTasteRecipesList.map((CurrentTasteRecipeItem, index) => (
+                        <CocktailRecipeTasteResultItem id={`CocktailRecipeTasteResultItem_${index}`} CurrentTasteRecipeItem={CurrentTasteRecipeItem}/>
                     ))
                 }</div>
             </div>

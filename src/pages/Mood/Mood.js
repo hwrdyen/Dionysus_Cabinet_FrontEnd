@@ -2,18 +2,11 @@ import "./Mood.scss";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-//import icons
-import After_Work from "../../assets/Icons/Mood_Type/After_Work.svg";
-import Blue_Monday from "../../assets/Icons/Mood_Type/Blue_Monday.svg";
-import First_Date from "../../assets/Icons/Mood_Type/First_Date.svg";
-import Partay_Queen from "../../assets/Icons/Mood_Type/Partay_Queen.svg";
-import Surprise_Me from "../../assets/Icons/Mood_Type/Surprise_Me.svg";
-
 //import gif
 import Bartending_Gif from "../../assets/Gifs/bartending_gif.gif";
 
 //import components
-import Cocktail_Recipe_Mood_Result from "../../components/Cocktail_Recipe_Mood_Result/Cocktail_Recipe_Mood_Result";
+import CocktailRecipeMoodResult from "../../components/Cocktail_Recipe_Mood_Result/Cocktail_Recipe_Mood_Result";
 
 
 function Mood(props) {
@@ -80,7 +73,7 @@ function Mood(props) {
                 <div id="Mood__navbar--list" className="Mood__navbar--list">{
                     RepresentMoodList.map((represent_mood) => (
                         <div id={represent_mood?.image_name} className="Mood__navbar--item" onClick={SelectMood}>
-                            <img className="Mood__item--image" src={`https://dionysus-cabinet-backend.herokuapp.com/assets/Mood_Type/${represent_mood?.image_name}.svg`}/>
+                            <img className="Mood__item--image" src={`https://dionysus-cabinet-backend.herokuapp.com/assets/Mood_Type/${represent_mood?.image_name}.svg`} alt="Mood"/>
                             <p className="Mood__item--title">{represent_mood?.mood_name}</p>
                         </div>
                 ))}
@@ -90,7 +83,7 @@ function Mood(props) {
                 <div id="Mood__bartending"></div>
 
                 <div className={`${isLoading === true ? "Mood__result--StillLoading" : "Mood__result--FinishedLoading"}`}>
-                    <Cocktail_Recipe_Mood_Result CurrentMood={CurrentMood}  AllRecipesInfo={props.AllRecipesInfo}/>
+                    <CocktailRecipeMoodResult CurrentMood={CurrentMood}  AllRecipesInfo={props.AllRecipesInfo}/>
                 </div>
                 
 

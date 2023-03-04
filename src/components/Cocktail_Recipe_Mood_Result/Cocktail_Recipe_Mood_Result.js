@@ -15,7 +15,7 @@ function Cocktail_Recipe_Mood_Result(props) {
         else {
             setCurrentMoodRecipesList([]);
         }
-    }, [props.CurrentMood])
+    }, [props.CurrentMood, props.AllRecipesInfo])
 
     // console.log(CurrentMoodRecipesList);
 
@@ -29,7 +29,7 @@ function Cocktail_Recipe_Mood_Result(props) {
                 <p className="Mood-Result__moodtitle neon-text">"{props.CurrentMood}"</p>
                 <NavLink to={`/cocktail_recipe/${random_MoodRecipe?.id}`} className={`${random_MoodRecipe ? 'Mood-Result__ShowResult' : 'Mood-Result__NoResult'}`}>
                     <div className="Mood-Result__block">
-                        <img className="Mood-Result__image" src={`${random_MoodRecipe?.img_id ? `https://dionysus-cabinet-backend.herokuapp.com/assets/Cocktail_Type/${random_MoodRecipe?.img_id}.jpg` : ""} `}/>
+                        <img className="Mood-Result__image" src={`${random_MoodRecipe?.img_id ? `https://dionysus-cabinet-backend.herokuapp.com/assets/Cocktail_Type/${random_MoodRecipe?.img_id}.jpg` : ""} `} alt="Mood Status" />
                         <p className="Mood-Result__title neon-text">{random_MoodRecipe?.cocktail_name}</p>
                     </div>
                 </NavLink>

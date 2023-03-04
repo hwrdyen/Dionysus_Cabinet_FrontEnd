@@ -8,8 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //import components
 import HomePage from './pages/HomePage/HomePage';
 import Header from "./components/Header/Header.js";
-import Alcohol_Cabinet from './pages/Alcohol_Cabinet/Alcohol_Cabinet';
-import Cocktail_Recipe_Page from './pages/Cocktail_Recipe_Page/Cocktail_Recipe_Page';
+import AlcoholCabinet from './pages/Alcohol_Cabinet/Alcohol_Cabinet';
+import CocktailRecipePage from './pages/Cocktail_Recipe_Page/Cocktail_Recipe_Page';
 import Taste from "./pages/Taste/Taste.js";
 import Mood from "./pages/Mood/Mood.js";
 import Upload from "./pages/Upload/Upload.js";
@@ -67,8 +67,8 @@ function App() {
         <Header setRefetchRecipe={setRefetchRecipe}/>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/liquor_cellar" element={<Alcohol_Cabinet CurrentAlcohol={CurrentAlcohol} setCurrentAlcohol={setCurrentAlcohol} CurrentAlcoholRecipes={CurrentAlcoholRecipes}/>}/>
-          <Route path="/cocktail_recipe/:cocktail_recipe_ID" element={<Cocktail_Recipe_Page AllRecipesInfo={AllRecipesInfo}/>}/>
+          <Route path="/liquor_cellar" element={<AlcoholCabinet CurrentAlcohol={CurrentAlcohol} setCurrentAlcohol={setCurrentAlcohol} CurrentAlcoholRecipes={CurrentAlcoholRecipes}/>}/>
+          <Route path="/cocktail_recipe/:cocktail_recipe_ID" element={<CocktailRecipePage AllRecipesInfo={AllRecipesInfo}/>}/>
           <Route path="taste_concierge" element={<Taste AllRecipesInfo={AllRecipesInfo}/>} />
           <Route path="mood_matchmaker" element={<Mood AllRecipesInfo={AllRecipesInfo}/>} />
           <Route path="upload" element={<Upload setRefetchRecipe={setRefetchRecipe}/>} />

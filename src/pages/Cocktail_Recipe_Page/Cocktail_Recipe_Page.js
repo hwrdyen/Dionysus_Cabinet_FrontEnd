@@ -21,12 +21,12 @@ function Cocktail_Recipe_Page(props) {
                         <div className="Recipe__name">{CurrentCocktailRecipe?.cocktail_name}</div>
                         <div className={`Recipe__author ${CurrentCocktailRecipe?.cocktail_recipe_author?.name ? `show` : `hidden`}`}>By {CurrentCocktailRecipe?.cocktail_recipe_author?.name}</div>
                     </div>
-                    <img className="Recipe__image" src={`https://dionysus-cabinet-backend.herokuapp.com/assets/Cocktail_Type/${CurrentCocktailRecipe?.img_id}.jpg`}/>
+                    <img className="Recipe__image" src={`https://dionysus-cabinet-backend.herokuapp.com/assets/Cocktail_Type/${CurrentCocktailRecipe?.img_id}.jpg`} alt="Cocktail Recipe"/>
                 </div>
 
                 <div className="Recipe__tags--list" id="Recipe__tags--list">{
-                    CurrentCocktailRecipe?.cocktail_included_alchohol.map((alcohol) => (
-                        <div className="Recipe__tags--item">{alcohol}</div>
+                    CurrentCocktailRecipe?.cocktail_included_alchohol.map((alcohol, index) => (
+                        <div id={`cocktail_included_alchohol_${index}`} className="Recipe__tags--item">{alcohol}</div>
                     ))
                 }</div>
                 
@@ -35,7 +35,7 @@ function Cocktail_Recipe_Page(props) {
                         <p className="Recipe_Page__title">Ingredient:</p>
                         <div className="Cocktail_Recipe--ingredientlistcontainer">{
                         CurrentCocktailRecipe?.cocktail_ingredients.split(";").map((ingredient, index) => (
-                            <p>- {ingredient}</p>
+                            <p id={`ingredient_${index}`}>- {ingredient}</p>
                         ))}</div>
                     </div>
 
@@ -43,7 +43,7 @@ function Cocktail_Recipe_Page(props) {
                         <p className="Recipe_Page__title">Steps:</p>
                         <div>{
                         CurrentCocktailRecipe?.cocktail_recipe_steps.split(";").map((step, index) => (
-                            <p>{parseInt(index)+1}. {step}</p>
+                            <p id={`steps_${index}`}>{parseInt(index)+1}. {step}</p>
                         ))}</div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import "./Taste.scss";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-import Cocktail_Recipe_Taste_Result_List from "../../components/Cocktail_Recipe_Taste_Result_List/Cocktail_Recipe_Taste_Result_List.js"
+import CocktailRecipeTasteResultList from "../../components/Cocktail_Recipe_Taste_Result_List/Cocktail_Recipe_Taste_Result_List.js"
 
 function Taste(props) {
     const [ TastePreferencesList, setTastePreferencesList] = useState([]);
@@ -88,7 +88,7 @@ function Taste(props) {
                   </Box>
               </div>
 
-              <Cocktail_Recipe_Taste_Result_List CurrentTaste={CurrentTaste}  AllRecipesInfo={props.AllRecipesInfo} TastePreferencesList={TastePreferencesList}/>
+              <CocktailRecipeTasteResultList CurrentTaste={CurrentTaste}  AllRecipesInfo={props.AllRecipesInfo} TastePreferencesList={TastePreferencesList}/>
           </section>
         </>
     );
