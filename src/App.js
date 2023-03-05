@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     function GetAllRecipesInfo() {
-      return axios.get(`http://localhost:8080/cocktails_list`)
+      return axios.get(`http://localhost:5050/cocktails_list`)
       .then((element) => {
           let recipes_info = element.data;
           setAllRecipesInfo(recipes_info);
@@ -41,7 +41,7 @@ function App() {
 
   useEffect(() => {
     function GetCurrentAlcoholRecipesInfo() {
-      return axios.get(`http://localhost:8080/cocktails_list`)
+      return axios.get(`http://localhost:5050/cocktails_list`)
       .then((element) => {
           let recipes_info = element.data;
           if (CurrentAlcohol !== "") {

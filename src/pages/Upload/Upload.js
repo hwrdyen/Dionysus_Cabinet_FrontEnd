@@ -112,7 +112,7 @@ function Upload(props) {
     // Successfully submit and make a post request to backend
     useEffect(() => {
         if (SuccessfullySubmit === true) {
-            axios.post(`http://localhost:8080/cocktails_list`, NewCocktailRecipe)
+            axios.post(`http://localhost:5050/cocktails_list`, NewCocktailRecipe)
             .then(res => {
                 console.log(res);
                 setSuccessfullySubmit(false);

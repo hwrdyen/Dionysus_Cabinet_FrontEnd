@@ -3,7 +3,7 @@ import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import Hamburger from 'hamburger-react';
 
-import dionysus_cabinet_logo from "../../assets/Icons/dionysus_cabinet_logo.svg";
+import dionysus_cabinet_mysql_logo from "../../assets/Icons/dionysus_cabinet_mysql_logo.svg";
 
 function Header(props) {
 
@@ -39,7 +39,7 @@ function Header(props) {
                         {/* <div>
                             Dionysus Cabinet
                         </div> */}
-                        <img className="Header__logo--image" src={dionysus_cabinet_logo} alt="Dionysus Cabinet"/>
+                        <img className="Header__logo--image" src={dionysus_cabinet_mysql_logo} alt="Dionysus Cabinet MySQL Version"/>
                     </NavLink>
                 </div>
 

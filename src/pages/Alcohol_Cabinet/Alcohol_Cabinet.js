@@ -24,7 +24,7 @@ function Alcohol_Cabinet(props) {
 
     useEffect(() => {
         function GetAlcoholList() {
-            return axios.get(`http://localhost:8080/alcohol_list`)
+            return axios.get(`http://localhost:5050/alcohol_list`)
             .then((element) => {
                 let alcohol_list_info = element.data;
                 setAlcoholList(alcohol_list_info);  
@@ -44,7 +44,7 @@ function Alcohol_Cabinet(props) {
                 <div className="Alcohol_Cabinet__alcoholtype">{ 
                         AlcoholList.map((alcohol_type) => (
                                 <div id={`${alcohol_type?.image_name}`} className={`Alcohol_Cabinet__block`} onClick={SelectAlcohol}>
-                                    <img src={`http://localhost:8080/assets/Alcohol_Type/${alcohol_type?.image_name}.png`} alt={`${alcohol_type?.alcohol_name}`} className="Alcohol_Cabinet__block_image"/>
+                                    <img src={`http://localhost:5050/assets/Alcohol_Type/${alcohol_type?.image_name}.png`} alt={`${alcohol_type?.alcohol_name}`} className="Alcohol_Cabinet__block_image"/>
                                     <div className="Alcohol_Cabinet__block_title">{alcohol_type?.alcohol_name}</div>
                                 </div>                     
                 ))}</div>

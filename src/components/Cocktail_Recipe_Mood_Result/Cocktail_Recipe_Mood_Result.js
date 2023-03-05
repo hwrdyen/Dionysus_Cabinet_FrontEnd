@@ -34,7 +34,7 @@ function Cocktail_Recipe_Mood_Result(props) {
                 <p className="Mood-Result__moodtitle neon-text">"{props.CurrentMood}"</p>
                 <NavLink to={`/cocktail_recipe/${random_MoodRecipe?.recipe_id}`} className={`${random_MoodRecipe ? 'Mood-Result__ShowResult' : 'Mood-Result__NoResult'}`}>
                     <div className="Mood-Result__block">
-                        <img className="Mood-Result__image" src={`${random_MoodRecipe?.img_id ? `http://localhost:8080/assets/Cocktail_Type/${random_MoodRecipe?.img_id}.jpg` : ""} `}/>
+                        <img className="Mood-Result__image" src={`${random_MoodRecipe?.img_id ? `http://localhost:5050/assets/Cocktail_Type/${random_MoodRecipe?.img_id}.jpg` : ""} `}/>
                         <p className="Mood-Result__title neon-text">{random_MoodRecipe?.cocktail_name}</p>
                     </div>
                 </NavLink>
