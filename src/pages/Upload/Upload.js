@@ -2,7 +2,6 @@ import './Upload.scss';
 import axios from "axios";
 import * as uuid from "uuid";
 import { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
 
 function Upload(props) {
     const [SuccessfullySubmit, setSuccessfullySubmit] = useState(false);
@@ -21,7 +20,6 @@ function Upload(props) {
         }
     });
 
-    const navigate = useNavigate();
     const onSubmit = (event) => {
         event.preventDefault();
 
