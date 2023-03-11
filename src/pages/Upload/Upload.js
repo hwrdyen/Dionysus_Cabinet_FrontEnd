@@ -120,7 +120,7 @@ function Upload(props) {
             })
             .catch(err => console.log(err));
         }
-    }, [SuccessfullySubmit])
+    }, [SuccessfullySubmit, NewCocktailRecipe])
 
     // Cocktail Ingredients
     // Add Ingredients Input
