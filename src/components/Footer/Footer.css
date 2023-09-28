@@ -1,0 +1,24 @@
+@media screen and (min-device-width: 0px) {
+  .Footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4A950;
+  }
+  .Footer__title {
+    font-size: 10px;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .Footer__title {
+    font-size: 12px;
+  }
+}
+@media screen and (min-device-width: 1280px) {
+  .Footer__title {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=Footer.css.map */

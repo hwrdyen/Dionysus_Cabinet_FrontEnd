@@ -1,0 +1,256 @@
+@media screen and (min-device-width: 0px) {
+  .Upload {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 0.0625rem solid black;
+    background-color: #161B21;
+    color: #F4A950;
+    border-radius: 3px;
+    padding: 10px 20px;
+  }
+  .Upload__titlecontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .Upload__title {
+    font-size: 20px;
+    margin: 5px 0px;
+  }
+  .Upload__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Upload__form--AuthorInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .Upload__AuthorInfoForm--title {
+    margin-bottom: 8px;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .Upload__AuthorInfoForm--textinput {
+    border: 1px solid black;
+    width: 250px;
+    height: 20px;
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    box-shadow: 5px 5px #808080;
+  }
+  .Upload__form--RecipeDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  .Upload__RecipeDetailsForm--title {
+    margin-bottom: 8px;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .Upload-form__RecipeDetails--sectionone,
+  .Upload-form__RecipeDetails--sectiontwo {
+    display: flex;
+    flex-direction: column;
+  }
+  .Upload__RecipeDetailsForm--textinput {
+    border: 1px solid black;
+    width: 250px;
+    height: 20px;
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    box-shadow: 5px 5px #808080;
+  }
+  .Upload__RecipeDetailsForm--IngredientsInput {
+    border: 1px solid black;
+    width: 250px;
+    height: 20px;
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    box-shadow: 5px 5px #808080;
+  }
+  .Upload__RecipeDetailsForm--AddIngredientsInput,
+  .Upload__RecipeDetailsForm--RemoveIngredientsInput {
+    border: 1px solid black;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 16px;
+  }
+  .Upload__RecipeDetailsForm--IngredientsButtonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .Upload__RecipeDetailsForm--LiquorTypeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 278px;
+  }
+  .Upload__RecipeDetailsForm--LiquorType {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin-bottom: 16px;
+    background-color: white;
+    color: #161B21;
+  }
+  .Upload__RecipeDetailsForm--LiquorTypeTitle {
+    font-size: 14px;
+    text-align: center;
+  }
+  .Upload__RecipeDetailsForm--MoodCategoryDropdown {
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin-bottom: 16px;
+  }
+  .Upload__RecipeDetailsForm--TasteCategoryDropdown {
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin-bottom: 16px;
+  }
+  .Upload__RecipeDetailsForm--StepsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Upload__RecipeDetailsForm--StepsInput {
+    border: 1px solid black;
+    width: 250px;
+    height: 20px;
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    box-shadow: 5px 5px #808080;
+  }
+  .Upload__RecipeDetailsForm--AddStepsInput,
+  .Upload__RecipeDetailsForm--RemoveStepsInput {
+    border: 1px solid black;
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 16px;
+  }
+  .Upload__RecipeDetailsForm--StepsButtonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .Upload__form--SubmitButtonContainer {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .Upload__form--SubmitButton,
+  .Upload__form--ResetButton {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 8px 25px;
+    width: 120px;
+    background-color: #002859;
+    color: white;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .Upload {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 20px 30px;
+  }
+  .Upload__form {
+    padding: 0px 30px;
+  }
+  .Upload__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .Upload-form__RecipeDetails--sectioncontainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .Upload__AuthorInfoForm--textinput {
+    width: 450px;
+  }
+  .Upload__RecipeDetailsForm--IngredientsContainer,
+  .Upload__RecipeDetailsForm--StepsContainer {
+    width: 270px;
+  }
+  .Upload__form--SubmitButtonContainer {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .Upload__form--SubmitButton,
+  .Upload__form--ResetButton {
+    padding: 8px 25px;
+    width: 200px;
+  }
+}
+@media screen and (min-device-width: 1280px) {
+  .Upload {
+    padding: 50px 30px;
+  }
+  .Upload__form {
+    padding: 0px 100px;
+  }
+  .Upload__title {
+    font-size: 45px;
+  }
+  .Upload-form__RecipeDetails--sectioncontainer {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .Upload__RecipeDetailsForm--IngredientsContainer,
+  .Upload__RecipeDetailsForm--StepsContainer {
+    width: 370px;
+  }
+  .Upload__RecipeDetailsForm--textinput,
+  .Upload__RecipeDetailsForm--IngredientsInput,
+  .Upload__RecipeDetailsForm--StepsInput,
+  .Upload__RecipeDetailsForm--LiquorTypeContainer {
+    width: 350px;
+  }
+  .Upload__RecipeDetailsForm--MoodCategoryDropdown,
+  .Upload__RecipeDetailsForm--TasteCategoryDropdown {
+    width: 350px;
+  }
+}/*# sourceMappingURL=Upload.css.map */

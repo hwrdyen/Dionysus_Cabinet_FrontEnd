@@ -1,0 +1,125 @@
+@media screen and (min-device-width: 0px) {
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .Header {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F4A950;
+  }
+  .Header__logo {
+    width: 150px;
+    margin-left: calc(50vw - 123px);
+  }
+  .Header__logo--image {
+    width: 150px;
+  }
+  .Header__navbar__tablet {
+    display: none;
+  }
+  .Header__navbar--button {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 6px 10px;
+    background-color: #161B21;
+    color: #F4A950;
+  }
+  .Header__navbar--button:hover {
+    transition-duration: 2s;
+  }
+  .before_hover {
+    font-size: 13px;
+  }
+  .Header__navbar--button .after_hover {
+    display: none;
+    font-size: 13px;
+    text-align: center;
+  }
+  .Header__navbar--button:hover .before_hover {
+    display: none;
+    font-size: 13px;
+    text-align: center;
+  }
+  .Header__navbar--button:hover .after_hover {
+    display: flex;
+    font-size: 13px;
+    text-align: center;
+  }
+  .Header__navbar__mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  .Header__logo {
+    margin-left: 0;
+  }
+  .before_hover {
+    font-size: 17px;
+  }
+  .Header__navbar--button .after_hover {
+    font-size: 17px;
+  }
+  .Header__navbar--button:hover .before_hover {
+    font-size: 17px;
+  }
+  .Header__navbar--button:hover .after_hover {
+    font-size: 17px;
+  }
+  .Header__navbar__mobilecontainer {
+    display: none;
+  }
+  .Header__navbar__mobile.tablet__hidden {
+    display: none;
+  }
+  .Header__navbar__tablet {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: auto;
+  }
+}
+@media screen and (min-device-width: 1280px) {
+  .Header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .before_hover {
+    font-size: 20px;
+  }
+  .Header__navbar--button .after_hover {
+    font-size: 20px;
+  }
+  .Header__navbar--button:hover .before_hover {
+    font-size: 20px;
+  }
+  .Header__navbar--button:hover .after_hover {
+    font-size: 20px;
+  }
+  .Header__logo,
+  .Header__logo--link,
+  .Header__logo--image {
+    width: 200px;
+  }
+}/*# sourceMappingURL=Header.css.map */

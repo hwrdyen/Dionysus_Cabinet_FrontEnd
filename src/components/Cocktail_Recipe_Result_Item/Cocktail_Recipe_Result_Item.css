@@ -1,0 +1,22 @@
+@media screen and (min-device-width: 0px) {
+  .Cocktail_Recipe_Result_Item {
+    margin: 10px 0px;
+    border: 1px solid black;
+    width: 120px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    background-color: #CEBBA8;
+    color: #161B21;
+  }
+  .Result-Item__image {
+    width: 120px;
+    height: 120px;
+  }
+  .Result-Item__title {
+    text-align: center;
+    color: #161B21;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=Cocktail_Recipe_Result_Item.css.map */

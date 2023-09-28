@@ -1,0 +1,72 @@
+@media screen and (min-device-width: 0px) {
+  .Taste {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 0.0625rem solid black;
+    background-color: #161B21;
+    color: #F4A950;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Taste__titlecontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .Taste__title {
+    font-size: 20px;
+    margin: 5px 0px;
+  }
+  .Taste__slidebar--section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .Taste__slidebar--container {
+    width: 250px;
+  }
+  .MuiSlider-root.MuiSlider-marked.MuiSlider-colorPrimary.MuiSlider-sizeMedium.css-1aznpnh-MuiSlider-root {
+    color: white;
+  }
+  .MuiSlider-markLabel.MuiSlider-markLabelActive {
+    font-family: "SourceSerifPro-Bold";
+    color: #F4A950;
+  }
+  .MuiSlider-markLabel.css-yafthl-MuiSlider-markLabel {
+    font-family: "SourceSerifPro-Bold";
+    color: #161B21;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .Taste {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 20px 30px;
+  }
+  .Taste__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .Taste__slidebar--container {
+    width: 300px;
+  }
+}
+@media screen and (min-device-width: 1280px) {
+  .Taste {
+    padding: 50px 30px;
+  }
+  .Taste__title {
+    font-size: 45px;
+  }
+  .Taste__slidebar--container {
+    width: 400px;
+  }
+}/*# sourceMappingURL=Taste.css.map */

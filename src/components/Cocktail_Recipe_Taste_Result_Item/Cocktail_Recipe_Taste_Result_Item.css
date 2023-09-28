@@ -1,0 +1,19 @@
+@media screen and (min-device-width: 0px) {
+  .Cocktail_Recipe_Taste_Result_Item--card {
+    margin: 10px 0px;
+    border: 1px solid black;
+    width: 120px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+  }
+  .Cocktail_Recipe_Taste_Result_Item--image {
+    width: 120px;
+    height: 120px;
+  }
+  .Cocktail_Recipe_Taste_Result_Item--title {
+    text-align: center;
+    color: #F4A950;
+  }
+}/*# sourceMappingURL=Cocktail_Recipe_Taste_Result_Item.css.map */

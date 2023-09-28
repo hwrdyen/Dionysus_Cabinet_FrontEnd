@@ -1,0 +1,111 @@
+@media screen and (min-device-width: 0px) {
+  .show {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .Cocktail_Recipe_Page {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 0.0625rem solid black;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    background-color: #161B21;
+    color: #F4A950;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Recipe__name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .Recipe__author {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .Recipe__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .Recipe__image {
+    width: 150px;
+    height: 150px;
+  }
+  .Recipe__tags--list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0px;
+  }
+  .Recipe__tags--item {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #F4A950;
+    color: #161B21;
+  }
+  .Cocktail_Recipe--ingredientcontainer {
+    max-width: 490px;
+    background-color: #F4A950;
+    color: #161B21;
+    border-radius: 20px;
+    padding: 10px 15px;
+  }
+  .Cocktail_Recipe--ingredientlistcontainer {
+    margin-left: 20px;
+  }
+  .Cocktail_Recipe--stepcontainer {
+    margin-top: 20px;
+    max-width: 490px;
+    background-color: #F4A950;
+    color: #161B21;
+    border-radius: 20px;
+    padding: 10px 15px;
+  }
+  .Recipe_Page__title {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .Recipe__info {
+    gap: 70px;
+  }
+  .Recipe__name {
+    font-size: 30px;
+  }
+  .Recipe__author {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .Recipe__image {
+    width: 250px;
+    height: 250px;
+  }
+  .Cocktail_Recipe--infocontainer {
+    display: flex;
+    flex-direction: row;
+    vertical-align: baseline;
+    gap: 10px;
+  }
+}
+@media screen and (min-device-width: 1280px) {
+  .Recipe__name {
+    font-size: 45px;
+  }
+  .Recipe__author {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=Cocktail_Recipe_Page.css.map */
