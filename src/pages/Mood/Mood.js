@@ -7,13 +7,16 @@ import Bartending_Gif from "../../assets/Gifs/bartending_gif.gif";
 
 //import components
 import CocktailRecipeMoodResult from "../../components/Cocktail_Recipe_Mood_Result/Cocktail_Recipe_Mood_Result";
+import Spinner from "../../components/Spinner/Spinner";
 
 function Mood(props) {
+  const [Loading, setLoading] = useState(false);
   const [isLoading, setisLoading] = useState(true);
   const [CurrentMood, setCurrentMood] = useState("");
   const [RepresentMoodList, setRepresentMoodList] = useState([]);
 
   useEffect(() => {
+    setLoading(true);
     function GetRepresentMoodList() {
       return axios
         .get(
@@ -22,6 +25,11 @@ function Mood(props) {
         .then((element) => {
           let represent_mood_list_info = element.data;
           setRepresentMoodList(represent_mood_list_info);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
         });
     }
     GetRepresentMoodList();
@@ -71,23 +79,26 @@ function Mood(props) {
         <div className="Mood__titlecontainer">
           <p className="Mood__title">Mood Matchmaker</p>
         </div>
-
-        <div id="Mood__navbar--list" className="Mood__navbar--list">
-          {RepresentMoodList.map((represent_mood) => (
-            <div
-              id={represent_mood?.image_name}
-              className="Mood__navbar--item"
-              onClick={SelectMood}
-            >
-              <img
-                className="Mood__item--image"
-                src={`https://dionysus-cocktail-cabinet-be.onrender.com/assets/Mood_Type/${represent_mood?.image_name}.svg`}
-                alt="Mood"
-              />
-              <p className="Mood__item--title">{represent_mood?.mood_name}</p>
-            </div>
-          ))}
-        </div>
+        {Loading ? (
+          <Spinner />
+        ) : (
+          <div id="Mood__navbar--list" className="Mood__navbar--list">
+            {RepresentMoodList.map((represent_mood) => (
+              <div
+                id={represent_mood?.image_name}
+                className="Mood__navbar--item"
+                onClick={SelectMood}
+              >
+                <img
+                  className="Mood__item--image"
+                  src={`https://dionysus-cocktail-cabinet-be.onrender.com/assets/Mood_Type/${represent_mood?.image_name}.svg`}
+                  alt="Mood"
+                />
+                <p className="Mood__item--title">{represent_mood?.mood_name}</p>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div id="Mood__bartending"></div>
 

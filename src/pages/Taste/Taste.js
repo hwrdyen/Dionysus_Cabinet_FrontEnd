@@ -6,12 +6,15 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import CocktailRecipeTasteResultList from "../../components/Cocktail_Recipe_Taste_Result_List/Cocktail_Recipe_Taste_Result_List.js";
+import Spinner from "../../components/Spinner/Spinner.jsx";
 
 function Taste(props) {
+  const [Loading, setLoading] = useState(false);
   const [TastePreferencesList, setTastePreferencesList] = useState([]);
   const [CurrentTaste, setCurrentTaste] = useState("");
 
   useEffect(() => {
+    setLoading(true);
     function GetTastePreferencesList() {
       return axios
         .get(
@@ -20,6 +23,11 @@ function Taste(props) {
         .then((element) => {
           let taste_preferences_list_info = element.data;
           setTastePreferencesList(taste_preferences_list_info);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
         });
     }
     GetTastePreferencesList();
@@ -93,11 +101,15 @@ function Taste(props) {
           </Box>
         </div>
 
-        <CocktailRecipeTasteResultList
-          CurrentTaste={CurrentTaste}
-          AllRecipesInfo={props.AllRecipesInfo}
-          TastePreferencesList={TastePreferencesList}
-        />
+        {Loading ? (
+          <Spinner />
+        ) : (
+          <CocktailRecipeTasteResultList
+            CurrentTaste={CurrentTaste}
+            AllRecipesInfo={props.AllRecipesInfo}
+            TastePreferencesList={TastePreferencesList}
+          />
+        )}
       </section>
     </>
   );
